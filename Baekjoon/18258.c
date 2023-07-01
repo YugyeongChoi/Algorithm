@@ -1,3 +1,6 @@
+//
+// Created by 최유경 on 2023/07/01.
+//
 #pragma warning(disable:4996)
 #include<stdio.h>
 #include<string.h>
@@ -22,7 +25,7 @@ void initqueue(queue *q){
 void push(queue *q, int m){
     q->n++;
     q->rear++;
-    q->ar[(q->rear)%n] = m; 
+    q->ar[(q->rear)%n] = m;
 }
 
 void pop(queue *q){
@@ -30,10 +33,10 @@ void pop(queue *q){
         printf("-1\n");
     }
     else{
-       q->n--;
-       q->front++;
+        q->n--;
+        q->front++;
         int tmp = q->ar[(q->front)%n];
-        printf("%d\n",tmp);     
+        printf("%d\n",tmp);
     }
 }
 
@@ -77,24 +80,24 @@ int main(){
         getchar();
         scanf("%s",str);
         if(strcmp("push",str) == 0){
-           scanf("%d",&m);
-           push(q,m); 
+            scanf("%d",&m);
+            push(q,m);
         }
         if(strcmp("front",str) == 0){
-           front(q); 
-        } 
+            front(q);
+        }
         if(strcmp("back",str) == 0){
-           back(q); 
+            back(q);
         }
         if(strcmp("pop",str) == 0){
-           pop(q); 
+            pop(q);
         }
         if(strcmp("size",str) == 0){
-           size(q); 
+            size(q);
         }
         if(strcmp("empty",str) == 0){
-           empty(q); 
+            empty(q);
         }
-                                               
+
     }
 }
